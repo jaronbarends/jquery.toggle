@@ -1,0 +1,8 @@
+.toggle {
+	cursor: pointer;
+}
+
+.toggle-panel.collapsed,
+.togglePanel.collapsed {
+	display: none;
+}
