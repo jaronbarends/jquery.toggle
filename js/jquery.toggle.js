@@ -5,37 +5,37 @@
 	/**
 	* toggles a panel when its toggler is clicked.
 	* to link toggle and toggle panel:
-	* give toggle class="toggle", panel class="toggle-panel"
-	* add another class "collapsed" or "expanded" to the togglePanels for the initial state
-	* by default, the plugin searches for a sibling of .toggle with class .togglePanel
+	* give toggle class="js-toggle";
+	* the panel gets two classes: one general class js-toggle-panel,
+	* and one depending on its default state: js-toggle-panel--expanded or js-toggle-panel--collapsted
+	* e.g. class="js-toggle-panel js-toggle-panel--expanded"
+	* add another class "collapsed" or "expanded" to the toggle-panels for the initial state
+	* by default, the plugin searches for a sibling of .js-toggle with class .js-toggle-panel
 	* if you don't want that, give both the attribute data-toggle-panel-id with same value
-	* when no data-toggle-panel-id attribute is present,
 	
 	* @param {event} e The toggler's click event
 	* @returns {undefinded}
 	*/
 
 	var toggleHandler = function(e) {
-		console.log('handle');
 		e.preventDefault();
 		var $toggle = $(e.currentTarget),
 			panelId = $toggle.attr('data-toggle-panel-id'),
 			$panel;
 
 		if (panelId) {
-			$panel = $('.toggle-panel[data-toggle-panel-id="'+panelId+'"], .toggle-panel[data-toggle-panel-id="'+panelId+'"]');
+			$panel = $('.js-toggle-panel[data-toggle-panel-id="'+panelId+'"], .js-toggle-panel[data-toggle-panel-id="'+panelId+'"]');
 		} else {
-			//no id; search for first sibling with class togglePanel
-			$panel = $toggle.parent().find('.toggle-panel').first();
+			//no id; search for first sibling with class toggle-panel
+			$panel = $toggle.parent().find('.js-toggle-panel').first();
 		}
-		console.log('len:',$panel.length);
 
 		if ($panel.length) {
 			var useJS = $panel.is('[data-toggle-with-js]');
 			if (useJS) {
 				$panel.slideToggle('fast');
 			}
-			$panel.toggleClass('collapsed expanded');
+			$panel.toggleClass('js-toggle-panel--collapsed js-toggle-panel--expanded');
 
 			//toggle title or linktext
 			if ($toggle.attr('data-toggle-text')) {
@@ -60,7 +60,7 @@
 	* @returns {undefinded}
 	*/
 	var init = function() {
-		$(document).on('click', '.toggle', toggleHandler);
+		$(document).on('click', '.js-toggle', toggleHandler);
 	};
 
 	init();

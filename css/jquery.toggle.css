@@ -1,8 +1,11 @@
-.toggle {
+.js-toggle {
 	cursor: pointer;
 }
 
-.toggle-panel.collapsed,
-.togglePanel.collapsed {
+.js-toggle-panel--collapsed {
 	display: none;
+}
+
+.js-toggle-panel--expanded {
+	display: block;
 }
