@@ -2,10 +2,10 @@
 	cursor: pointer;
 }
 
-.js-toggle-panel--collapsed {
+.js-toggle-panel--is-collapsed {
 	display: none;
 }
 
-.js-toggle-panel--expanded {
+.js-toggle-panel--is-expanded {
 	display: block;
 }
