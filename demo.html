@@ -15,46 +15,54 @@
 	<link rel="stylesheet" href="css/demo.css">
 	<link rel="stylesheet" href="css/jquery.toggle.css">
 </head>
-<body>
-	<div class="wrapper">
+<body class="pg-demo">
+	<div class="o-content-width">
 
-		<div>
+		<div class="example">
 			<h2>toggle sibling</h2>
+			By default, an element with the class <code>js-toggle</code> toggles its first sibling with class <code>js-toggle-panel</code>
 			<a href="#" class="js-toggle js-toggle--is-expanded">toggle sibling</a>
 			<div class="js-toggle-panel js-toggle-panel--is-expanded">
-				sibling panel
+				I'm the first sibling panel; I wil get toggled
 			</div>
-
+			<div class="js-toggle-panel js-toggle-panel--is-expanded">
+				I'm the second sibling panel; I won't get toggled
+			</div>
 		</div>
 
-		<div>
+		<div class="example">
 			<h2>toggle panel anywhere</h2>
-			<a href="#" class="js-toggle js-toggle--is-expanded" data-toggle-panel-id="1">toggle panel  with data-toggle-panel-id="1" anywhere in source code</a>
+			<p>
+				<a href="#" class="js-toggle js-toggle--is-expanded" data-toggle-panel-id="1">toggle panel  with <code>data-toggle-panel-id="1"</code> somewhere else in source code</a> in the source code (the one width the yellowish background below)
+			</p>
 		</div>
 
-		<div>
+		<div class="example">
 			<h2>Toggle multiple panels by id</h2>
+			<p>
+				<a href="#" class="js-toggle" data-toggle-panel-id="2">toggle mulitple panels</a>
+			</p>
 
 			<div class="js-toggle-panel js-toggle-panel--is-expanded" data-toggle-panel-id="2">
-				I'm a panel with data-toggle-panel-id="2"
+				I'm a panel with <code>data-toggle-panel-id="2"</code>
 			</div>
 			<div class="js-toggle-panel js-toggle-panel--is-expanded" data-toggle-panel-id="2">
-				I'm a panel with data-toggle-panel-id="2" too
+				I'm a panel with <code>data-toggle-panel-id="2"</code> too
 			</div>
 			<div class="js-toggle-panel js-toggle-panel--is-expanded" data-toggle-panel-id="2">
-				I'm a panel with data-toggle-panel-id="2" as well
+				I'm a panel with <code>data-toggle-panel-id="2"</code> as well
 			</div>
-			<a href="#" class="js-toggle" data-toggle-panel-id="2">toggle mulitple panels</a>
 		</div>
 
-
-		<div class="js-toggle-panel js-toggle-panel--is-expanded" data-toggle-panel-id="1">
-			panel with data-toggle-panel-id="1" somewhere else in the source code
+		<div class="example">
+			<div class="js-toggle-panel js-toggle-panel--is-expanded" data-toggle-panel-id="1">
+				panel with <code>data-toggle-panel-id="1"</code>
+			</div>
 		</div>
 
-		<div>
-			<h2>Togglegroup: expanding one collapses the others</h2>
-			<ul>
+		<div class="example">
+			<h2>Togglegroup (accordion): expanding one collapses the others</h2>
+			<ul class="u-f-list">
 				<li>
 					<a href="#" class="js-toggle js-toggle--is-expanded" data-toggle-group="my-toggle-group">toggle group - #1</a>
 					<div class="js-toggle-panel js-toggle-panel--is-expanded">
@@ -76,7 +84,7 @@
 			</ul>
 		</div>
 		
-	</div><!-- /.wrapper -->
+	</div><!-- /.o-content-width -->
 
 	<!--[if (gte IE 9)|!(IE)]><!-->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -85,6 +93,7 @@
 	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.3/jquery.min.js"></script>
     <![endif]-->
 
-    <script src="js/jquery.toggle.js"></script>
+    <!-- <script src="js/jquery.toggle.js"></script> -->
+    <script src="js/jquery.toggle.min.js"></script>
 </body>
 </html>

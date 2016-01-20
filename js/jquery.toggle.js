@@ -65,7 +65,8 @@
 			$panel = $('.js-toggle-panel[data-toggle-panel-id="'+panelId+'"]');
 		} else {
 			//no id; search for first sibling with class toggle-panel
-			$panel = $toggle.parent().find('.js-toggle-panel').first();
+			$panel = $toggle.siblings('.js-toggle-panel').first();
+			console.log($panel.length);
 		}
 
 		if ($panel.length) {

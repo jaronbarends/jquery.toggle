@@ -1,0 +1,24 @@
+{
+  "name": "jquery.toggle",
+  "version": "1.0.0",
+  "homepage": "https://github.com/jaronbarends/jquery.toggle",
+  "authors": [
+    "jaronbarends <jaron@jaron.nl>"
+  ],
+  "description": "Simple, lightweight jQuery plugin for toggling content",
+  "main": "js/jquery.toggle.min.js",
+  "keywords": [
+    "javascript",
+    "jQuery",
+    "toggle"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
