@@ -66,7 +66,6 @@
 		} else {
 			//no id; search for first sibling with class toggle-panel
 			$panel = $toggle.siblings('.js-toggle-panel').first();
-			console.log($panel.length);
 		}
 
 		if ($panel.length) {
