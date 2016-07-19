@@ -6,7 +6,10 @@
     "jaronbarends <jaron@jaron.nl>"
   ],
   "description": "Simple, lightweight jQuery plugin for toggling content",
-  "main": "js/jquery.toggle.min.js",
+  "main": [
+    "js/jquery.toggle.min.js",
+    "css/jquery.toggle.css"
+  ],
   "keywords": [
     "javascript",
     "jQuery",
