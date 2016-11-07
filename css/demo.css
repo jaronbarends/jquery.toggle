@@ -43,8 +43,25 @@ body {
 	padding: 1em;
 }
 
-.pg-demo .js-toggle-panel[data-toggle-panel-id="1"] {
+.pg-demo [data-toggle-panel-id="1"] {
 	background: #ffc;
+}
+
+.pg-demo .js-toggle:after {
+	display: inline-block;
+	margin: 0 0.5em;
+	padding: 0 0.3em;
+	width: 0.5em;
+	font-weight: bold;
+	background: blue;
+	color: white;
+}
+.pg-demo .js-toggle--is-collapsed:after {
+	content: '+';
+}
+
+.pg-demo .js-toggle--is-expanded:after {
+	content: '-';
 }
 
 .pg-demo code {
