@@ -8,7 +8,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
-	<title>jQuery toggle</title>
+	<title>jQuery toggle Demo</title>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
@@ -68,24 +68,28 @@
 			<h2>Togglegroup (accordion): expanding one collapses the others</h2>
 			<ul class="u-f-list">
 				<li>
-					<a href="#" class="js-toggle js-toggle--is-expanded" data-toggle-group="my-toggle-group">toggle group - #1</a>
-					<div class="js-toggle-panel js-toggle-panel--is-expanded">
+					<a href="#" id="toggle-3.1" class="js-toggle js-toggle--is-expanded" data-toggle-group="my-toggle-group" data-toggle-panel-id="3.1">toggle group - #1</a>
+					<div class="js-toggle-panel js-toggle-panel--is-expanded" data-toggle-panel-id="3.1">
 						toggle group panel #1
 					</div>
 				</li>
 				<li>
-					<a href="#" class="js-toggle js-toggle--is-collapsed" data-toggle-group="my-toggle-group">toggle group - #2</a>
-					<div class="js-toggle-panel js-toggle-panel--is-collapsed">
+					<a href="#" id="toggle-3.2" class="js-toggle js-toggle--is-collapsed" data-toggle-group="my-toggle-group" data-toggle-panel-id="3.2">toggle group - #2</a>
+					<div class="js-toggle-panel js-toggle-panel--is-collapsed" data-toggle-panel-id="3.2">
 						toggle group panel #2
 					</div>
 				</li>
 				<li>
-					<a href="#" class="js-toggle js-toggle--is-collapsed" data-toggle-group="my-toggle-group">toggle group - #3</a>
-					<div class="js-toggle-panel js-toggle-panel--is-collapsed">
+					<a href="#" id="toggle-3.3" class="js-toggle js-toggle--is-collapsed" data-toggle-group="my-toggle-group" data-toggle-panel-id="3.3">toggle group - #3</a>
+					<div class="js-toggle-panel js-toggle-panel--is-collapsed" data-toggle-panel-id="3.3">
 						toggle group panel #3
 					</div>
 				</li>
 			</ul>
+			<p>
+				<a href="#" id="toggle-3.1.b" class="js-toggle js-toggle--is-expanded" data-toggle-group="my-toggle-group" data-toggle-panel-id="3.1">another toggle for toggle group - #1</a>
+			</p>
+
 		</div>
 		
 	</div><!-- /.o-content-width -->

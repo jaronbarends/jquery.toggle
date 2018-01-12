@@ -38,9 +38,9 @@ body {
 }
 
 .pg-demo .js-toggle-panel {
-	border: 1px dotted #ccc;
+	/*border: 1px dotted #ccc;*/
 	background: #eee;
-	padding: 1em;
+	/*padding: 1em;*/
 }
 
 .pg-demo [data-toggle-panel-id="1"] {
