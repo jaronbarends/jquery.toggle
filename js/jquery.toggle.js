@@ -32,6 +32,11 @@
 			$panel,
 			$toggles = $toggle;// new var so we can group all toggles with same panel-id
 
+		// check if it is not an expand-only toggle with expanded state, or collapse-only with collapsed state
+		if ($toggle.is('.js-toggle--is-expanded[data-toggle-expand-only]') || $toggle.is('.js-toggle--is-collapsed[data-toggle-collapse-only]')) {
+			return;
+		}
+
 		//check if we have to toggle a panel with id or a sibling
 		if (panelId) {
 			$panel = $('.js-toggle-panel[data-toggle-panel-id="'+panelId+'"]');
